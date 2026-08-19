@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="refresh" content="0; url=mumble://://mumble-voip.com">
+    <title>Подключение к Mumble...</title>
+</head>
+<body>
+    <p>Если Mumble не открылся автоматически, <a href="mumble://://mumble-voip.com">нажмите сюда</a>.</p>
+    <script>
+        window.location.href = "mumble://://mumble-voip.com";
+    </script>
+</body>
+</html>
