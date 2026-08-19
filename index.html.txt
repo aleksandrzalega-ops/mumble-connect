@@ -1,13 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <meta http-equiv="refresh" content="0; url=mumble://://mumble-voip.com">
-    <title>Подключение к Mumble...</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подключение к Mumble</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            background: #2a2a2a;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+        h1 { font-size: 24px; margin-bottom: 10px; color: #00ff66; }
+        p { color: #cccccc; font-size: 16px; margin-bottom: 25px; }
+        .btn {
+            display: inline-block;
+            background-color: #00ff66;
+            color: #000000;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.2s, transform 0.1s;
+            cursor: pointer;
+        }
+        .btn:hover { background-color: #00cc52; }
+        .btn:active { transform: scale(0.98); }
+    </style>
 </head>
 <body>
-    <p>Если Mumble не открылся автоматически, <a href="mumble://://mumble-voip.com">нажмите сюда</a>.</p>
-    <script>
+
+<div class="container">
+    <h1>Голосовая связь</h1>
+    <p>Нажмите на кнопку ниже, чтобы автоматически запустить Mumble и войти в комнату.</p>
+    
+    <!-- Кнопка с прямой ссылкой, которую браузер 100% разрешит открыть -->
+    <a href="mumble://://mumble-voip.com" class="btn" id="connectBtn">ПОДКЛЮЧИТЬСЯ</a>
+</div>
+
+<script>
+    // Запасной скрипт: если пользователь просто кликнет в любое место экрана, тоже попробуем запустить
+    document.body.addEventListener('click', function() {
         window.location.href = "mumble://://mumble-voip.com";
-    </script>
+    });
+</script>
+
 </body>
 </html>
